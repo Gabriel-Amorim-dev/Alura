@@ -1,0 +1,81 @@
+#HTML#
+<body>
+  
+  <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo">
+<div class="container">
+    <div class="content">
+      <h2>Quem ganha, ganha em Wons!</h2>
+      <p> Que tal converter esse valor?</p>
+      <button onclick="conversor()">Bora converter!</button>
+    </div>
+  </div>
+  <footer>Alura - Imersão DEV - 2025</footer>
+</body>
+
+#JS#
+let valorwons = parseFloat(prompt("Digite um valor em wons")); 
+let wonemreal = 0.0042;
+let wonemdolar = 0.00068;
+
+let valoremreal = valorwons * wonemreal;
+let valoremdolar = valorwons * wonemdolar;
+
+alert ('R$' + valoremreal + '(BRL\n)' + '$' + valoremdolar + 'USD\n');
+
+#CSS#
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 150px;
+  width: auto;
+}
+
+/* Container with the background image */
+.container {
+  background: url('https://img.freepik.com/fotos-gratis/quadro-de-notas-de-dolar_1150-6686.jpg?t=st=1743463650~exp=1743467250~hmac=76a8bfd3bfb839367276dffb245945968eee3032792b076578e367ccf9224f67&w=1380') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content div for text and button */
+.content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+  background-color: purple;
+  box-shadow: 15px 10px violet;
+  max-width: 600px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #1ABC9C;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+}
