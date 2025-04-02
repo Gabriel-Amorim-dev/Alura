@@ -1,0 +1,104 @@
+#HTML#
+<body>
+  <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo">
+
+  <div class="container">
+    <div class="content">
+      <h2>Venha ser um mestre Pokemon!</h2>
+      <p> Batalha de Tipos!</p>
+      <button onclick="jogar()">Bora jogar!</button>
+    </div>
+  </div>
+  <footer>Alura - Imersão DEV - 2025</footer>
+</body>
+
+#CSS#
+/* Global Styles */
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 150px;
+  width: auto;
+}
+
+/* Container with the background image */
+.container {
+  background: url('https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/147C0/production/_132740938_indeximage.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content div for text and button */
+.content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+  background-color: #ff1b7b;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+button:hover {
+  background-color: #1ABC9C;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+#JS#
+idade = prompt('Qual sua idade?')
+if (idade >= 6){
+  escolhaUser = prompt('Digite: 1-Agua 2-Fogo 3-Planta 4-Terra 5-Eletrico')
+}
+let escolhaComputador = Math.floor(Math.random() * 5) + 1;
+
+// User Agua, Computador Agua --> Empate
+// User Fogo, Computador Fogo --> Empate
+// User Planta, Computador Planta --> Empate
+// User Terra, Computador Terra --> Empate
+// User Eletrico, Computador Eletrico --> Empate
+alert(`Você escolheu ${[escolhaUser]} e o computador escolheu ${[escolhaComputador]}`);
+
+  if (escolhaUser == escolhaComputador) {
+    alert('O resultado é Empate');
+  } else if (
+    (escolhaUser == 1 && escolhaComputador == 2) || // Água vence Fogo
+    (escolhaUser == 2 && escolhaComputador == 3) || // Fogo vence Planta
+    (escolhaUser == 3 && escolhaComputador == 4) || // Planta vence Terra
+    (escolhaUser == 4 && escolhaComputador == 5) || // Terra vence Elétrico
+    (escolhaUser == 5 && escolhaComputador == 1)    // Elétrico vence Água
+  ) {
+    alert('Você Venceu!');
+  } else {
+    alert('Você Perdeu!');
+  }
+
