@@ -1,0 +1,124 @@
+#HTML#
+1
+<body>
+  <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo">
+
+  <div class="container">
+    <div class="content">
+      <h2>Venha testar sua sorte</h2>
+      <p> JOGOS MORTAIS!</p>
+      <button onclick="jogo()">PAGUE PELOS SEUS ERROS!</button>
+      <div class ="music">
+        <a href  = "https://youtu.be/vhSHXGM7kgE?si=KKfjCahKYOXNNjp1" style = "color: #dc143c" target = "_Blank"><H4>Toque enquanto joga</H4></a>
+      </div>
+    </div>
+  </div>
+  <footer>Alura - Imersão DEV - 2025</footer>
+</body>
+
+#CSS#
+/* Global Styles */
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 150px;
+  width: auto;
+}
+
+/* Container with the background image */
+.container {
+  background: url('https://i.ebayimg.com/images/g/uOYAAOSwnTtetpjR/s-l1200.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content div for text and button */
+.content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.content h2 {
+    margin-bottom: 25px;
+    color: #dc143c;
+    text-shadow: 0 0 5px #ff1b7b;
+    font-size: 4em;
+    letter-spacing: 0.4em;
+}
+
+/* Button Styles */
+button {
+  background-color: #dc143c;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+button:hover {
+  background-color: #1ABC9C;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+#JS#
+function jogo(){
+let nome = prompt('Insira seu nome:')
+alert('Olá,' + nome + ' Vamos jogar um jogo')
+alert('Você deve escolher 1 porta para garantir sua segurança, duas vão te tirar daqui, uma vai acionar uma armadilha que irá lhe matar')
+alert('Que comecem os jogos')
+rodada = 1;
+while (rodada <= 10) {
+  console.log("Rodada: " + rodada);
+let  escolhaUser = prompt("Nivel" + rodada + ", escolha uma porta: (1,2 ou 3):");
+let portaMortal = Math.floor(Math.random() * 3) + 1;
+  if (escolhaUser == null || escolhaUser.trim() === "") {
+      return;
+    }
+  if (escolhaUser > 3 || escolhaUser < 1) {
+      alert("Trapaceiros Não Tem Perdão");
+      break;
+  }
+
+  if (escolhaUser == portaMortal) {
+    //escolheu o vidro que estava quebrado
+    alert("Porta Errada! Acabou o jogo pra voce");
+    break;
+  }
+  else if (escolhaUser > 3) {
+    alert('Trapaceiros não tem perdão')
+    break;
+  }
+  else{
+    alert("Passou! A porta mortal era a: " + portaMortal)
+  }
+  
+  rodada = rodada + 1;
+}
+
+// veio para ca quando rodada >= 11
+if(rodada == 11){
+  alert("Voce escapou por enquanto, mas acredite, se não passar a valorizar sua vida e a de outras pessoas, não irá demorar para nos vermos novamente.")
+  }
+}
