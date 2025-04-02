@@ -75,6 +75,7 @@ footer {
 }
 
 #JS#
+function jogar() {
 idade = prompt('Qual sua idade?')
 if (idade >= 6){
   escolhaUser = prompt('Digite: 1-Agua 2-Fogo 3-Planta 4-Terra 5-Eletrico')
@@ -101,4 +102,4 @@ alert(`Você escolheu ${[escolhaUser]} e o computador escolheu ${[escolhaComputa
   } else {
     alert('Você Perdeu!');
   }
-
+}
