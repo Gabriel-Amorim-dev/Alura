@@ -160,7 +160,6 @@ st.markdown(
     <ul>
       <li><a href="https://github.com/Gabriel-Amorim-dev" target="_blank">GitHub</a></li>
       <li><a href="https://colab.research.google.com/drive/1UIUNyn3UQf2_qO4vrIiICI53b7yine75#scrollTo=ZKDB93eiMPvR" target="_blank">Google Colab do Dashboard</a></li>
-      <li><a href="mailto:gabrielgmamorim@gmail.com" target="_blank">Email</a></li>
     </ul>
     """,
     unsafe_allow_html=True
